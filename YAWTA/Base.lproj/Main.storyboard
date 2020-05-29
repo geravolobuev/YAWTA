@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OyY-Nk-0ew">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="BqB-bG-uLb">
+            <objects>
+                <viewController id="OyY-Nk-0ew" customClass="MainViewController" customModule="YAWTA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4GU-1S-YYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxd-ri-GhP">
+                                <rect key="frame" x="0.0" y="50" width="375" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <state key="normal" title="0"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u1s-1L-uBg">
+                                <rect key="frame" x="112.5" y="183.5" width="150" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJL-91-U76">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3Rd-PO-VCx"/>
+                                            <constraint firstAttribute="width" constant="150" id="tbx-A4-IRT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="1L">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button1L:" destination="OyY-Nk-0ew" eventType="touchUpInside" id="Lax-Ne-JQc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-QH-BkW">
+                                        <rect key="frame" x="0.0" y="100" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="G3l-pH-YOH"/>
+                                            <constraint firstAttribute="height" constant="100" id="jcC-rY-a7F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-15" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="500ml" image="bottle">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button500ml:" destination="OyY-Nk-0ew" eventType="touchUpInside" id="Z2m-5h-ffG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf1-Xu-ZP1">
+                                        <rect key="frame" x="0.0" y="200" width="150" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="djV-DT-1l4"/>
+                                            <constraint firstAttribute="width" constant="150" id="zTQ-Dd-GcP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-15" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="250ml" image="glass">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button250ml:" destination="OyY-Nk-0ew" eventType="touchUpInside" id="Yub-Rc-3Hf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pms-ZG-Ezo">
+                                <rect key="frame" x="16" y="581" width="69" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="Icon-Apple-Health-Off">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="Icon-Apple-Health">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="appleHealthButtonTapped:" destination="OyY-Nk-0ew" eventType="touchUpInside" id="WQj-gm-wof"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZR-Bo-btX">
+                                <rect key="frame" x="298" y="595" width="61" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="notify">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="notificationButtonTapped:" destination="OyY-Nk-0ew" eventType="touchUpInside" id="dEZ-HU-JBe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Xxd-ri-GhP" firstAttribute="leading" secondItem="Loh-xR-mGo" secondAttribute="leading" id="4Na-YD-ecL"/>
+                            <constraint firstItem="Loh-xR-mGo" firstAttribute="trailing" secondItem="hZR-Bo-btX" secondAttribute="trailing" constant="16" id="4nf-Tb-145"/>
+                            <constraint firstItem="Loh-xR-mGo" firstAttribute="bottom" secondItem="hZR-Bo-btX" secondAttribute="bottom" constant="30" id="8Xd-TG-gxT"/>
+                            <constraint firstItem="u1s-1L-uBg" firstAttribute="centerX" secondItem="4GU-1S-YYf" secondAttribute="centerX" id="FSF-5d-jNU"/>
+                            <constraint firstItem="Loh-xR-mGo" firstAttribute="bottom" secondItem="pms-ZG-Ezo" secondAttribute="bottom" constant="30" id="MMy-le-r1i"/>
+                            <constraint firstItem="Loh-xR-mGo" firstAttribute="trailing" secondItem="Xxd-ri-GhP" secondAttribute="trailing" id="S6M-Ad-g28"/>
+                            <constraint firstItem="u1s-1L-uBg" firstAttribute="centerY" secondItem="4GU-1S-YYf" secondAttribute="centerY" id="bzy-6O-Vib"/>
+                            <constraint firstItem="pms-ZG-Ezo" firstAttribute="leading" secondItem="Loh-xR-mGo" secondAttribute="leading" constant="16" id="cen-CX-rsx"/>
+                            <constraint firstItem="Xxd-ri-GhP" firstAttribute="top" secondItem="Loh-xR-mGo" secondAttribute="top" constant="50" id="p3q-hi-Fuz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Loh-xR-mGo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bnE-gv-Pfk" appends="YES" id="qZF-Z5-B8v"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="appleHealthButton" destination="pms-ZG-Ezo" id="6JZ-Xh-lPy"/>
+                        <outlet property="notificationButton" destination="hZR-Bo-btX" id="CQo-9U-Ke3"/>
+                        <outlet property="totalWaterLabel" destination="Xxd-ri-GhP" id="Lac-Vl-9XH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVI-6E-6zo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="bnE-gv-Pfk"/>
+            </objects>
+            <point key="canvasLocation" x="314.39999999999998" y="-15.742128935532236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-Apple-Health" width="69" height="56"/>
+        <image name="Icon-Apple-Health-Off" width="69" height="56"/>
+        <image name="bottle" width="24" height="54.5"/>
+        <image name="glass" width="25.5" height="36.5"/>
+    </resources>
+</document>
