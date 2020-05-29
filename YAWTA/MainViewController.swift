@@ -74,7 +74,6 @@ class MainViewController: UIViewController {
         
         if let savedConfig = savedUserConfig {
             userConfig = savedConfig
-            userConfig?.currentWaterIntake = 0
             updateUI()
         } else {
             nc.requestAuthorization()
