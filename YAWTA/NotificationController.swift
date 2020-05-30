@@ -18,10 +18,8 @@ class NotificationController {
         center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("Notifications authorized")
-
             } else if let error = error {
                 print(error.localizedDescription)
-
             }
         }
     }
@@ -50,12 +48,10 @@ class NotificationController {
             center.add(request)
             
         }
-        print("Notification scheduled")
     }
     
     
     func removeNotifications() {
         center.removeAllPendingNotificationRequests()
-        print("Notificaiton is stopped")
     }
 }

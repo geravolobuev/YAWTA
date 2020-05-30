@@ -47,22 +47,18 @@ struct UserModel {
         
         if let data = try? encoder.encode(user) {
             try? data.write(to: userConfigFileURL)
-            print("Data is saved")
         }
     }
     
-    init() {
-        
-        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let userConfigFileURL = documentDirectoryURL.appendingPathComponent("user").appendingPathExtension("json")
-        
-        if let data = try? Data(contentsOf: userConfigFileURL) {
-            let decoder = JSONDecoder()
-            user = try! decoder.decode(User.self, from: data)
-        } else {
-//            user = User(currentWaterIntake: 0, notificationIsOn: true, date: Date.dayToday())
+    init(testing: Bool = false) {
+        if !testing {
+            let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let userConfigFileURL = documentDirectoryURL.appendingPathComponent("user").appendingPathExtension("json")
+            
+            if let data = try? Data(contentsOf: userConfigFileURL) {
+                let decoder = JSONDecoder()
+                user = try! decoder.decode(User.self, from: data)
+            }
         }
-
     }
-
 }

@@ -77,15 +77,14 @@ class MainViewController: UIViewController {
         nc.requestAuthorization()
         ah.checkAvailability()
         updateUI()
+        
     }
     
     @objc private func checkNotificationStatus() {
         nc.center.getNotificationSettings{ (settings) in
             if (settings.authorizationStatus == .authorized) {
-                print("N authorized")
                 self.notificationsAllowed = true
             } else {
-                print("N not authorized")
                 self.notificationsAllowed = false
             }
         }
@@ -96,7 +95,6 @@ class MainViewController: UIViewController {
         
         if  Date.dayToday() != date {
             self.model.refreshTotal()
-            print("startNewDay fired!")
             notificationScheduled = model.getNotificationStatus()
             updateUI()
             
@@ -104,7 +102,6 @@ class MainViewController: UIViewController {
     }
     
     func updateUI() {
-        print("UPDATE UI FIRED WITH: \(model)")
         DispatchQueue.main.async {
             self.totalWaterAmount = self.model.getWaterStatus()
             self.notificationButton.isSelected = self.model.getNotificationStatus()
@@ -136,7 +133,6 @@ class MainViewController: UIViewController {
 
         if ah.authorizationStatus() {
             ah.save(amount)
-            print("Healthkit saved")
         }
     }
     
