@@ -16,8 +16,8 @@
 		0413AF4E24816F3A0019459B /* YAWTATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413AF4D24816F3A0019459B /* YAWTATests.swift */; };
 		041F5122247C0C4500139496 /* SPWaterProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F5121247C0C4500139496 /* SPWaterProgressIndicatorView.swift */; };
 		044A5A8324540CE3003439CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5A8224540CE3003439CD /* MainViewController.swift */; };
-		044A5A8724540D9F003439CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5A8624540D9F003439CD /* UserModel.swift */; };
-		044A5A8924540F2D003439CD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5A8824540F2D003439CD /* ModelController.swift */; };
+		044A5A8724540D9F003439CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5A8624540D9F003439CD /* User.swift */; };
+		044A5A8924540F2D003439CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5A8824540F2D003439CD /* UserModel.swift */; };
 		04BD992E2464FF7C006060C4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BD992D2464FF7C006060C4 /* HealthKit.framework */; };
 		04BD995024650F08006060C4 /* AppleHealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD994F24650F08006060C4 /* AppleHealthController.swift */; };
 		04D6E92F2457EEDC006CB438 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6E92E2457EEDC006CB438 /* NotificationController.swift */; };
@@ -47,8 +47,8 @@
 		0413AF4F24816F3A0019459B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041F5121247C0C4500139496 /* SPWaterProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPWaterProgressIndicatorView.swift; sourceTree = "<group>"; };
 		044A5A8224540CE3003439CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		044A5A8624540D9F003439CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		044A5A8824540F2D003439CD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		044A5A8624540D9F003439CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		044A5A8824540F2D003439CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04BD992B2464FF7C006060C4 /* YAWTA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YAWTA.entitlements; sourceTree = "<group>"; };
 		04BD992D2464FF7C006060C4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		04BD994F24650F08006060C4 /* AppleHealthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleHealthController.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 				040DBD972396EB94003B5B52 /* AppDelegate.swift */,
 				040DBD992396EB94003B5B52 /* SceneDelegate.swift */,
 				040DBD9D2396EB94003B5B52 /* Main.storyboard */,
-				044A5A8624540D9F003439CD /* UserModel.swift */,
-				044A5A8824540F2D003439CD /* ModelController.swift */,
+				044A5A8624540D9F003439CD /* User.swift */,
+				044A5A8824540F2D003439CD /* UserModel.swift */,
 				04D6E92E2457EEDC006CB438 /* NotificationController.swift */,
 				04BD994F24650F08006060C4 /* AppleHealthController.swift */,
 				044A5A8224540CE3003439CD /* MainViewController.swift */,
@@ -238,8 +238,8 @@
 				041F5122247C0C4500139496 /* SPWaterProgressIndicatorView.swift in Sources */,
 				04D6E92F2457EEDC006CB438 /* NotificationController.swift in Sources */,
 				040DBD982396EB94003B5B52 /* AppDelegate.swift in Sources */,
-				044A5A8924540F2D003439CD /* ModelController.swift in Sources */,
-				044A5A8724540D9F003439CD /* UserModel.swift in Sources */,
+				044A5A8924540F2D003439CD /* UserModel.swift in Sources */,
+				044A5A8724540D9F003439CD /* User.swift in Sources */,
 				040DBD9A2396EB94003B5B52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

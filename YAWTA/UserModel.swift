@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  ModelController.swift
 //  YAWTA
 //
 //  Created by MAC on 25/04/2020.
@@ -8,10 +8,61 @@
 
 import Foundation
 
-struct UserConfig: Codable {
+struct UserModel {
     
-    var currentWaterIntake: Double
-    var notificationIsOn: Bool
-    var date: Int
+    static let shared = UserModel()
+    
+    private var user = User(currentWaterIntake: 0, notificationIsOn: true, date: Date.dayToday())
+    
+    mutating func addWater(_ amount: Double) {
+        user.currentWaterIntake += amount
+        save()
+    }
+    
+    mutating func setNotification(_ isOn: Bool) {
+        user.notificationIsOn = isOn
+        save()
+    }
+    
+    func getWaterStatus() -> Double {
+        return user.currentWaterIntake
+    }
+    
+    func getNotificationStatus() -> Bool {
+        return user.notificationIsOn
+    }
+    
+    func getDate() -> Int {
+        return user.date
+    }
+    
+    mutating func refreshTotal() {
+        user.currentWaterIntake = 0.0
+    }
+    
+    func save() {
+        let encoder = JSONEncoder()
+        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let userConfigFileURL = documentDirectoryURL.appendingPathComponent("user").appendingPathExtension("json")
+        
+        if let data = try? encoder.encode(user) {
+            try? data.write(to: userConfigFileURL)
+            print("Data is saved")
+        }
+    }
+    
+    init() {
+        
+        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let userConfigFileURL = documentDirectoryURL.appendingPathComponent("user").appendingPathExtension("json")
+        
+        if let data = try? Data(contentsOf: userConfigFileURL) {
+            let decoder = JSONDecoder()
+            user = try! decoder.decode(User.self, from: data)
+        } else {
+//            user = User(currentWaterIntake: 0, notificationIsOn: true, date: Date.dayToday())
+        }
+
+    }
 
 }
