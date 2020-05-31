@@ -9,6 +9,7 @@
 import XCTest
 @testable import YAWTA
 
+
 class YAWTATests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -31,6 +32,17 @@ class YAWTATests: XCTestCase {
         }
     }
 
+    func testDayChanging() {
+        var model = UserModel(testing: true)
+        let yesterday = model.getDate()
+        
+        // simulate isDayChangedNotification notification
+        model.refreshTotal()
+        let today = model.getDate() + 1
+        
+        XCTAssertNotEqual(today, yesterday)
+    }
+    
     func testRefreshTotal() {
         var model = UserModel(testing: true)
         model.addWater(1)
@@ -39,7 +51,6 @@ class YAWTATests: XCTestCase {
         let totalWaterAfterRefresh = model.getWaterStatus()
         XCTAssertEqual(totalWaterAfterRefresh, 0, "Failed, its not 0")
     }
-    
     
 }
 

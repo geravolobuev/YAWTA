@@ -38,6 +38,7 @@ struct UserModel {
     
     mutating func refreshTotal() {
         user.currentWaterIntake = 0.0
+        user.date = Date.dayToday()
     }
     
     func save() {
