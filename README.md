@@ -12,4 +12,4 @@ Simple, no bs water tracker with Apple Health sync
 Demo
 ----
 
-<image src="/demo.gif" width="40%">
+<image src="/demo.gif" width="30%" height="30%">
